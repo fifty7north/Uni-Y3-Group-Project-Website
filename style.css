@@ -94,15 +94,15 @@ nav > a { /*Removes text underline in navbar buttons*/
 
 /**/
 
-.hero_section.toggled > #title {
+body.toggled > .hero_section > #title {
   opacity: 0;
 }
 
-.hero_section.toggled > #icon {
-  opacity: 1;
+body.toggled > .hero_section > #icon {
+  opacity: 0.3;
 }
 
-.hero_section.toggled > #tiles > .tile:hover {
+body.toggled > .hero_section > #tiles > .tile:hover {
   opacity: 0.05 !important;
 }
 
@@ -157,7 +157,6 @@ nav > a { /*Removes text underline in navbar buttons*/
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 80vmin;
   opacity: 0;
   pointer-events: none;
   transition: opacity 1200ms ease;
