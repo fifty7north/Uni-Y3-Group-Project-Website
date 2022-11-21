@@ -83,6 +83,32 @@ nav > a { /*Removes text underline in navbar buttons*/
   }
 }
 
+.hero_button {
+  position: absolute;
+  height: auto;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 1%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 100vw;
+  background-color: white;
+  color: var(--dark_purple);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero_button:hover {
+  background-color: silver;
+  color: black;
+}
+
+
 .event_description_section {
   height: 92vh;
   background-color: var(--dark_purple);
@@ -92,7 +118,7 @@ nav > a { /*Removes text underline in navbar buttons*/
   text-align: center;
 }
 
-/**/
+
 
 body.toggled > .hero_section > #title {
   opacity: 0;
