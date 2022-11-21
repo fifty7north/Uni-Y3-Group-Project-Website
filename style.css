@@ -1,5 +1,5 @@
-:root {
   /*Colour Scheme*/
+:root {
   --light_orange: rgba(244, 157, 43, 1);
   --dark_orange: rgba(235, 110, 41, 1);
   --light_purple: rgba(119, 46, 115, 1);
@@ -7,6 +7,7 @@
   --dark_purple: rgba(28, 27, 31, 1);
 }
 
+/*Whole page changes*/
 body{
   margin: 0%;
 }
@@ -14,6 +15,8 @@ body{
 
 
 /*Navbar*/
+
+
 
 nav {
   position: sticky;
@@ -32,6 +35,10 @@ nav {
   display: block;
   height: 8vh;
   text-align: center;
+}
+
+#home_button:hover {
+  background-color: var(--mid_purple);
 }
 
 #home_button img {
@@ -62,8 +69,15 @@ nav > a { /*Removes text underline in navbar buttons*/
   grid-column: 6/7;
 }
 
+
+
 /*Home page*/
 
+
+
+/*Hero section*/
+
+/*Hero section size and background/background animation*/
 .hero_section {
   height: 92vh;
   animation: background-pan 10s linear infinite;
@@ -73,6 +87,7 @@ nav > a { /*Removes text underline in navbar buttons*/
   margin: 0px;
 }
 
+/*Scrolling gradient animation keyframes*/
 @keyframes background-pan {
   from {
     background-position: 0% center;
@@ -109,36 +124,7 @@ nav > a { /*Removes text underline in navbar buttons*/
 }
 
 
-.event_description_section {
-  height: 92vh;
-  background-color: var(--dark_purple);
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 4em;
-  text-align: center;
-}
-
-
-
-body.toggled > .hero_section > #title {
-  opacity: 0;
-}
-
-body.toggled > .hero_section > #icon {
-  opacity: 0.3;
-}
-
-body.toggled > .hero_section > #tiles > .tile:hover {
-  opacity: 0.05 !important;
-}
-
-.centered {
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
+/*Tile grid layout*/
 #tiles {
   height: calc(92vh - 1px);
   width: calc(100% - 1px);
@@ -149,15 +135,13 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   grid-template-rows: repeat(var(--rows), 1fr);
 }
 
+/*Individual tiles*/
 .tile {
   cursor: pointer;
   position: relative;
 }
 
-.tile:hover:before {
-  opacity: 0.9;;
-}
-
+/*Individual tiles*/
 .tile:before {
   background-color: var(--dark_purple);
   content: "";
@@ -165,7 +149,16 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   position: absolute;
 }
 
-#title {
+/*Tile hover effect*/
+.tile:hover:before {
+  opacity: 0.9;;
+}
+
+.hero_header {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   color: white;
   font-family: "Rubik", sans-serif;
   font-size: 6vw;
@@ -177,7 +170,7 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   z-index: 2;
 }
 
-#icon {
+.hero_icon {
   width: 25%;
   left: 50%;
   position: absolute;
@@ -187,4 +180,29 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   pointer-events: none;
   transition: opacity 1200ms ease;
   z-index: 0;
+}
+
+/*Toggles the header when tiles are clicked*/
+body.toggled > .hero_section > .hero_header {
+  opacity: 0;
+}
+
+/*Toggles the ackground icon when tiles are clicked*/
+body.toggled > .hero_section > .hero_icon {
+  opacity: 0.3;
+}
+/*Hover effect when tiles are toggled*/
+body.toggled > .hero_section > #tiles > .tile:hover { 
+  opacity: 0.05 !important;
+}
+
+/*Event description section*/
+
+.event_description_section {
+  height: 92vh;
+  background-color: var(--dark_purple);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 4em;
+  text-align: center;
 }
