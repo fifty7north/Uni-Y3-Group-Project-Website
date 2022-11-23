@@ -107,11 +107,6 @@ nav > a { /*Removes text underline in navbar buttons*/
   border-top: 1px white solid;
 }
 
-.footer_copyright {;
-  align-items: center;
-  justify-content: center;
-}
-
 .footer p {
   text-align: center;
 }
