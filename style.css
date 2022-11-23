@@ -278,6 +278,7 @@ body.toggled > .hero_section > #tiles > .tile:hover {
 
 /*Showreel Section*/
 .home_showreel_container {
+  background-color: var(--light_purple);
   background-image: url("/assets/Home_BG.svg");
   background-repeat: no-repeat;
   background-size: cover;
