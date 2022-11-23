@@ -6,6 +6,7 @@
   --mid_purple: rgba(59, 23, 64, 1);
   --dark_purple: rgba(28, 27, 31, 1);
   --silver: rgba(208, 208, 208, 1);
+  --frosted_glass: rgba(255, 255, 255, 0.3);
   font-size: 16px;
 }
 
@@ -104,7 +105,7 @@ nav > a { /*Removes text underline in navbar buttons*/
 
 /*Hero section*/
 
-/*Hero section size and background/background animation*/
+/*Background & background animation*/
 .hero_section {
   height: 92vh;
   animation: background-pan 10s linear infinite;
@@ -160,15 +161,13 @@ nav > a { /*Removes text underline in navbar buttons*/
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
-  font-size: 6vw;
-  font-weight: 900;
   margin: 0px;
+  font-size: 8rem;
+  font-weight: 900;
   text-align: center;
   pointer-events: none;
   transition: opacity 1200ms ease;
-  width: 60vw;
+  width: 80vw;
   z-index: 2;
 }
 
@@ -204,6 +203,8 @@ nav > a { /*Removes text underline in navbar buttons*/
   top: 50%;
   transform: translate(-50%, -75%);
   opacity: 0;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   pointer-events: none;
   transition: opacity 1200ms ease;
   z-index: 0;
@@ -214,7 +215,7 @@ body.toggled > .hero_section > .hero_header {
   opacity: 0;
 }
 
-/*Toggles the ackground icon when tiles are clicked*/
+/*Toggles the background icon when tiles are clicked*/
 body.toggled > .hero_section > .hero_icon {
   opacity: 0.3;
 }
@@ -273,4 +274,80 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
+}
+
+/*Showreel Section*/
+.home_showreel_container {
+  background-image: url("/assets/Home_BG.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home_showreel_content {
+  display: flex;
+  width: 100%;
+}
+
+.home_showreel_gradient_top {
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to bottom, var(--dark_purple), rgba(0, 0, 0, 0));
+}
+
+.home_showreel_gradient_bottom {
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(to top, var(--dark_purple), rgba(0, 0, 0, 0));
+}
+
+.home_showreel_header_container {
+  width: 50%;
+}
+
+.home_showreel_header {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home_showreel_header > h1 {
+  cursor: default;
+  padding-top: 1rem;
+  padding-top: 1rem;
+  font-size: 8rem;
+  font-weight: 900;
+  color: white;
+}
+
+.home_showreel_header > h1:hover {
+  color: var(--silver);
+}
+
+#design {
+  margin-top: 8rem;
+}
+
+#play {
+  margin-bottom: 8rem;
+}
+
+.home_showreel_video_container {
+  position: relative;
+  width: 50%;
+}
+
+.home_showreel_video_player {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 42.5vw;
+  height: 25vw;
+  padding: 1rem;
+  background-color: var(--frosted_glass);
+  border-radius: 2.5vw;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
