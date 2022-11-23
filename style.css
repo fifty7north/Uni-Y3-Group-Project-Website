@@ -5,10 +5,37 @@
   --light_purple: rgba(119, 46, 115, 1);
   --mid_purple: rgba(59, 23, 64, 1);
   --dark_purple: rgba(28, 27, 31, 1);
+  --silver: rgba(208, 208, 208, 1);
+  font-size: 16px;
 }
 
 /*Whole page changes*/
 body{
+  margin: 0%;
+}
+
+h1 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0%;
+}
+
+h2 {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  margin: 0%;
+}
+
+p {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: justify;
+  color: white;
   margin: 0%;
 }
 
@@ -54,8 +81,8 @@ nav > a { /*Removes text underline in navbar buttons*/
 .navbar_button {
   display: flex;
   height: 8vh;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.5em;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 1.25rem;
   color: white;
   align-items: center;
   justify-content: center;
@@ -98,32 +125,6 @@ nav > a { /*Removes text underline in navbar buttons*/
   }
 }
 
-.hero_button {
-  position: absolute;
-  height: auto;
-  left: 50%;
-  top: 75%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  padding: 1%;
-  padding-left: 2%;
-  padding-right: 2%;
-  border-radius: 100vw;
-  background-color: white;
-  color: var(--dark_purple);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-}
-
-.hero_button:hover {
-  background-color: silver;
-  color: black;
-}
-
-
 /*Tile grid layout*/
 #tiles {
   height: calc(92vh - 1px);
@@ -160,14 +161,40 @@ nav > a { /*Removes text underline in navbar buttons*/
   top: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-family: "Rubik", sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 6vw;
+  font-weight: 900;
   margin: 0px;
   text-align: center;
   pointer-events: none;
   transition: opacity 1200ms ease;
-  width: 50vw;
+  width: 60vw;
   z-index: 2;
+}
+
+.hero_button {
+  position: absolute;
+  height: auto;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 100vw;
+  background-color: white;
+  color: var(--dark_purple);
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero_button:hover {
+  background-color: var(--silver);
+  color: black;
 }
 
 .hero_icon {
@@ -175,7 +202,7 @@ nav > a { /*Removes text underline in navbar buttons*/
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -75%);
   opacity: 0;
   pointer-events: none;
   transition: opacity 1200ms ease;
@@ -199,10 +226,51 @@ body.toggled > .hero_section > #tiles > .tile:hover {
 /*Event description section*/
 
 .event_description_section {
-  height: 92vh;
   background-color: var(--dark_purple);
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 4em;
+  text-align: center;
+}
+
+.home_description > h1 {
+  padding-top: 10vh;
+  padding-bottom: 5rem;
+}
+
+.home_description > p {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.quick_link_section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 8vh;
+  padding-bottom: 8vh;
+}
+
+.quick_link > button {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 100%;
+  background-color: white;
+}
+
+.quick_link > button:hover {
+  background-color: var(--silver);
+}
+
+.quick_link > h2 {
+  padding-top: 1.5rem;
+}
+
+.quick_link > p {
+  padding-left: 1rem;
+  padding-right: 1rem;
   text-align: center;
 }
