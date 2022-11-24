@@ -349,6 +349,35 @@ body.toggled > .hero_section > #tiles > .tile:hover { /*Hover effect when tiles 
   cursor: default;
 }
 
+/*Laptop screen*/
+@media screen and (max-width: 1024px) {
+  .home_description h1 {
+    font-size: 2rem;
+  }
+
+  .home_description p {
+    font-size: 1.5rem;
+  }
+
+  .home_quick_link h2 {
+    font-size: 1rem;
+  }
+
+  .home_quick_link p {
+    font-size: 0.75rem;
+  }
+}
+
+/*Tablet screen*/
+@media screen and (max-width: 768px) {
+  
+}
+
+/*Phone screen*/
+@media screen and (max-width: 425px) {
+  
+}
+
 /*-----Showreel Section-----*/
 
 .home_showreel_container {
@@ -434,13 +463,30 @@ body.toggled > .hero_section > #tiles > .tile:hover { /*Hover effect when tiles 
   height: 0;
 }
 
-.home_showreel_video_player iframe{
+.home_showreel_video_player iframe {
   position: absolute;
   top: 1.25vw;
   left: 1.25vw;
   width: 40vw;
   height: 22.5vw;
   border-radius: 1vw;
+}
+
+/*Laptop screen*/
+@media screen and (max-width: 1024px) {
+  .home_showreel_header h1{
+    font-size: 7rem;
+  }
+}
+
+/*Tablet screen*/
+@media screen and (max-width: 768px) {
+  
+}
+
+/*Phone screen*/
+@media screen and (max-width: 425px) {
+  
 }
 
 /*-----Sponsors Section-----*/
@@ -476,4 +522,19 @@ body.toggled > .hero_section > #tiles > .tile:hover { /*Hover effect when tiles 
   padding: 1rem;
   width: 15vw;
   height: auto;
+}
+
+/*Laptop screen*/
+@media screen and (max-width: 1024px) {
+  
+}
+
+/*Tablet screen*/
+@media screen and (max-width: 768px) {
+  
+}
+
+/*Phone screen*/
+@media screen and (max-width: 425px) {
+  
 }
