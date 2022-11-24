@@ -1,4 +1,7 @@
-  /*Colour Scheme*/
+  /*----------Colour Scheme----------*/
+
+
+
 :root {
   --light_orange: rgba(244, 157, 43, 1);
   --dark_orange: rgba(235, 110, 41, 1);
@@ -10,7 +13,12 @@
   font-size: 16px;
 }
 
-/*Whole page changes*/
+
+
+/*----------Universal changes----------*/
+
+
+
 body{
   margin: 0%;
 }
@@ -50,7 +58,9 @@ a {
   margin: 0%;
 }
 
-/*Navbar*/
+
+
+/*----------Navbar----------*/
 
 
 
@@ -111,7 +121,11 @@ nav {
   background-color: var(--mid_purple);
 }
 
-/*Footer*/
+
+
+/*----------Footer----------*/
+
+
 
 .footer {
   display: grid;
@@ -152,14 +166,15 @@ nav {
   margin-right: 2vw;
 }
 
-/*Home page*/
+
+
+/*----------Home page----------*/
 
 
 
-/*Hero section*/
+/*-----Hero section-----*/
 
-/*Background & background animation*/
-.hero_section {
+.hero_section { /*Background & background animation*/
   height: 92vh;
   animation: background-pan 10s linear infinite;
   background: linear-gradient(to right, var(--light_purple), var(--dark_orange), var(--light_purple));
@@ -168,8 +183,7 @@ nav {
   margin: 0px;
 }
 
-/*Scrolling gradient animation keyframes*/
-@keyframes background-pan {
+@keyframes background-pan { /*Scrolling gradient animation keyframes*/
   from {
     background-position: 0% center;
   }
@@ -179,8 +193,7 @@ nav {
   }
 }
 
-/*Tile grid layout*/
-#tiles {
+#tiles { /*Tile grid layout*/
   height: calc(92vh - 1px);
   width: calc(100% - 1px);
   position: relative;
@@ -190,22 +203,19 @@ nav {
   grid-template-rows: repeat(var(--rows), 1fr);
 }
 
-/*Individual tiles*/
-.tile {
+.tile { /*Individual tiles*/
   cursor: pointer;
   position: relative;
 }
 
-/*Individual tiles*/
-.tile:before {
+.tile:before { /*Individual tiles*/
   background-color: var(--dark_purple);
   content: "";
   inset: 0.5px;
   position: absolute;
 }
 
-/*Tile hover effect*/
-.tile:hover:before {
+.tile:hover:before { /*Tile hover effect*/
   opacity: 0.9;;
 }
 
@@ -263,23 +273,21 @@ nav {
   transition: opacity 1200ms ease;
 }
 
-/*Toggles the header when tiles are clicked*/
-body.toggled > .hero_section > .hero_header {
+body.toggled > .hero_section > .hero_header { /*Toggles the header when tiles are clicked*/
   opacity: 0;
 }
 
-/*Toggles the background icon when tiles are clicked*/
-body.toggled > .hero_section > .hero_icon {
+body.toggled > .hero_section > .hero_icon { /*Toggles the background icon when tiles are clicked*/
   opacity: 0.3;
 }
-/*Hover effect when tiles are toggled*/
-body.toggled > .hero_section > #tiles > .tile:hover { 
+
+body.toggled > .hero_section > #tiles > .tile:hover { /*Hover effect when tiles are toggled*/
   opacity: 0.05 !important;
 }
 
-/*Event description section*/
+/*-----Event description section-----*/
 
-.event_description_section {
+.home_event_description_section {
   background-color: var(--dark_purple);
   color: white;
   text-align: center;
@@ -298,7 +306,7 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   font-size: 2rem;
 }
 
-.quick_link_section {
+.home_quick_link_section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 60%;
@@ -322,26 +330,26 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   background-color: var(--silver);
 }
 
-.quick_link img {
+.home_quick_link img {
   width: 4vw;
   padding: 1vw;
 }
 
-.quick_link > h2 {
+.home_quick_link > h2 {
   padding-top: 1.5rem;
 }
 
-.quick_link > p {
+.home_quick_link > p {
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
 }
 
-.quick_link a {
+.home_quick_link a {
   cursor: default;
 }
 
-/*Showreel Section*/
+/*-----Showreel Section-----*/
 
 .home_showreel_container {
   background-color: var(--light_purple);
@@ -435,18 +443,18 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   border-radius: 1vw;
 }
 
-/*Sponsors Section*/
+/*-----Sponsors Section-----*/
 
-.sponsors_section {
+.home_sponsors_section {
   background-color: var(--dark_purple);
 }
 
-.sponsors_section > h1 {
+.home_sponsors_section > h1 {
   padding-top: 2rem;
   text-align: center;
 }
 
-.sponsors_section > p {
+.home_sponsors_section > p {
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
@@ -455,7 +463,7 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   font-size: 2rem;
 }
 
-.sponsors_logos {
+.home_sponsors_logos {
   display: grid;
   grid-template-columns: repeat(3, 20vw);
   width: 60vw;
@@ -464,7 +472,7 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   padding-bottom: 2rem;
 }
 
-.sponsors_logos > img {
+.home_sponsors_logos > img {
   padding: 1rem;
   width: 15vw;
   height: auto;
