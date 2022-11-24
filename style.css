@@ -50,17 +50,23 @@ nav {
   position: sticky;
   top: 0;
   z-index: 10;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  display: flex;
   width: 100%;
   height: 8vh;
   background-color: var(--dark_purple);
   border-bottom: 1px white solid;
 }
 
+.nav_home_button_container {
+  width: fit-content;
+}
+
 #home_button {
-  grid-column: 1/2;
   display: block;
+  width: fit-content;
+  margin-right: auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
   height: 8vh;
   text-align: center;
 }
@@ -75,26 +81,30 @@ nav {
   padding-bottom: 1vh;
 }
 
-nav > a { /*Removes text underline in navbar buttons*/
-  text-decoration: none;
+.nav_buttons_container {
+  display: flex;
+  width: 100%;
+  justify-content: right;
 }
 
 .navbar_button {
   display: flex;
+  width: fit-content;
   height: 8vh;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  align-items: center;
   font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   color: white;
-  align-items: center;
-  justify-content: center;
 }
 
 .navbar_button:hover {
   background-color: var(--mid_purple);
 }
 
-#sign_up_button {
-  grid-column: 6/7;
+nav a {
+  text-decoration: none;
 }
 
 /*Footer*/
