@@ -392,7 +392,7 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   width: 50%;
 }
 
-.home_showreel_video_player {
+.home_showreel_video {
   position: absolute;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -405,6 +405,21 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.home_showreel_video_player {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+
+.home_showreel_video_player iframe{
+  position: absolute;
+  top: 1.25vw;
+  left: 1.25vw;
+  width: 40vw;
+  height: 22.5vw;
+  border-radius: 1vw;
 }
 
 /*Sponsors Section*/
