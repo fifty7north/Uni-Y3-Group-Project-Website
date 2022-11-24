@@ -255,12 +255,12 @@ nav {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -75%);
+  z-index: 0;
   opacity: 0;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   pointer-events: none;
   transition: opacity 1200ms ease;
-  z-index: 0;
 }
 
 /*Toggles the header when tiles are clicked*/
@@ -402,8 +402,9 @@ body.toggled > .hero_section > #tiles > .tile:hover {
   padding: 1rem;
   background-color: var(--frosted_glass);
   border-radius: 2.5vw;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 /*Sponsors Section*/
